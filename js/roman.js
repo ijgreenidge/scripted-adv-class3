@@ -19,8 +19,54 @@ $(function() {
   function convertToRomanNumeral(number) {
     console.log("Number = " + number);
     var output = "";
-    return output;
+    
+    while (number > 0) {
+
+  if (number >= 100) {
+    output = output.concat("C")
   }
+
+
+  else if (number >= 90) {
+    output = output.concat("XC");
+    number -= 90;
+  }
+
+  else if (number >= 50) {
+    output = output.concat("L");
+    number -= 50;
+  }
+else if (number >= 40) {
+    output = output.concat("XL");
+    number -= 40;
+  }
+  
+  else if (number >= 10) {
+    output = output.concat("X");
+    number -= 10;
+  }
+  else if (number >= 9) {
+    output = output.concat("IX");
+    number -= 9;
+  }
+  else if (number >= 5) {
+    output = output.concat("V");
+    number -= 5;
+  }
+  else if (number >= 4) {
+    output = output.concat("IV");
+    number -= 4;
+  }
+  
+  else if (number >= 1) {
+    output = output.concat("I");
+    number -= 1;
+  }
+
+  return output;
+}
+}
+
 
 
 
